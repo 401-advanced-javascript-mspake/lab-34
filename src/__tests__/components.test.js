@@ -10,7 +10,7 @@ describe('App', () => {
     const noItemYet = app.find('li');
     expect(noItemYet.length).toBe(0);
 
-    const addItem = app.find('#add');
+    const addItem = app.find('input');
 
     function mockReset() { return ''; }
 

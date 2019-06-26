@@ -25,7 +25,6 @@ class Form extends React.Component {
     return (
       <form onSubmit={this.context.addItem}>
       <input
-       id="add"
         placeholder="Add To Do List Item"
         onChange={this.context.handleInputChange}
       />
