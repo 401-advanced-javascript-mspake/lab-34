@@ -2,6 +2,7 @@ import React from 'react';
 import Counter from '../counter/counter';
 import Form from '../form/form';
 import List from '../list/list';
+import Signin from '../signin/signin';
 
 import { Unless, When } from '../if/index';
 
@@ -19,14 +20,8 @@ class ToDo extends React.Component {
         <AuthContext.Consumer>
           { user => (
             <>
-            <Unless condition={user.loggedin}>
-              <form>
-                <input type='text' placeholder='username'></input>
-                <input type='text' placeholder='password'></input>
-                <button>Open Sesame</button>
-              </form>
-            </Unless>
-
+            <Signin />
+            
             <When condition={user.loggedin}>
               <section className="todo">
                 <div>

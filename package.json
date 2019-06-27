@@ -5,6 +5,7 @@
   "keywords": [],
   "main": "src/index.js",
   "dependencies": {
+    "dotenv": "^8.0.0",
     "enzyme": "latest",
     "enzyme-adapter-react-16": "1.7.0",
     "jsonwebtoken": "^8.5.1",

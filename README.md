@@ -15,7 +15,7 @@
 * [styleguide](http://xyz.com) (React assignments) -->
 
 ### Modules  
-#### `app.js, context.js, counter.js, form.js, if/index.js, list.js, todo.js`  
+#### `app.js, context.js, counter.js, form.js, if/index.js, list.js, auth-context.js, signin.js, todo.js`  
 ##### Exported Values and Methods  
   
 ###### `app -> React Component Instance`  
@@ -23,7 +23,9 @@
 ###### `form -> React Component Instance`  
 ###### `list -> React Component Instance`  
 ###### `todo -> React Component Instance`  
+###### `signin -> React Component Instance`  
 ###### `context -> React Context Instance`  
+###### `auth-context -> React Context Instance`  
 ###### `if/index.js -> Conditional Functions`  
   
 #### Running the app  
