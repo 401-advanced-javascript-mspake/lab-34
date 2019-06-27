@@ -31,7 +31,6 @@ class Signin extends React.Component {
       .post(`${API}/signin`)
       .auth(this.state.username, this.state.password)
       .then((response) => {
-        console.log(response);
         this.context.login(response.text);
       })
       .catch(console.error);

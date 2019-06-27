@@ -3,8 +3,9 @@ import Counter from '../counter/counter';
 import Form from '../form/form';
 import List from '../list/list';
 import Signin from '../signin/signin';
+import RoleValidation from '../role-permission/role-permission';
 
-import { Unless, When } from '../if/index';
+import { When } from '../if/index';
 
 // import { Context } from '../context/context';
 import { AuthContext } from '../context/auth-context';
@@ -25,15 +26,21 @@ class ToDo extends React.Component {
             <When condition={user.loggedin}>
               <section className="todo">
                 <div>
-                  <Counter />
+                  <RoleValidation capability='read'>
+                    <Counter />
+                  </RoleValidation>
                 </div>
 
                 <div>
-                  <Form />
+                  <RoleValidation capability='create'>
+                    <Form />
+                  </RoleValidation>
                 </div>
 
                 <div>
-                  <List />
+                  <RoleValidation capability='read'>
+                    <List />
+                  </RoleValidation>
                 </div>
               </section>
             </When>
